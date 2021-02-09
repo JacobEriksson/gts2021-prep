@@ -1,62 +1,71 @@
-.. title:: vGTS 2021 - CI/CD pipeline using Drone
+.. title:: vGTS 2021 - Cloud Native applications wth Karbon
 
 .. toctree::
   :maxdepth: 2
-  :caption: Build your labenvironment
-  :name: _lab_env
+  :caption: Preparation phase
+  :name: _prep_labs
   :hidden:
 
-  start/start
+  preparation/preparation
 
 .. toctree::
   :maxdepth: 2
-  :caption: Containerization
-  :name: _basic_labs
+  :caption: Karbon
+  :name: _karbon
   :hidden:
 
-  basic/basic
-  phase2/phase2
+  karbon/karbon
+
 
 .. toctree::
   :maxdepth: 2
-  :caption: CICD
-  :name: _cicd
-  :hidden:
-
-  phase3/phase3
-  phase4/phase4
-
-.. toctree::
-  :maxdepth: 2
-  :caption: CICD and Era
-  :name: _cicd-era
+  :caption: Deploy application
+  :name: _k8s-fiesta
   :hidden:
   
-  phase5/phase5
+  deploy/deploy
 
+.. toctree::
+  :maxdepth: 2
+  :caption: Day 2 operations
+  :name: _k8s-day2
+  :hidden:
   
+  day-2/day-2
+ 
 .. _getting_started:
 
 ---------------
 Getting Started
 ---------------
 
-This workshop is showing using a slow build up how to create a CI/CD pipeline using Drone,Gitea and a local Docker registry.
+This workshop is helping you in trying to understand where Nutanix can help organisation in their transistion towards Cloud Native Application based on Kubernetes.
 
 Pre-requirements
 ++++++++++++++++
 
-As this workshop is using Docker to a high extent, primary knowledge of containers and Docker in particular is needed.
-If this knowledge doesn't exist, please follow `this Docker workshop <https://nutanix.handsonworkshops.com/workshops/cd4549db-7d04-4a60-b24c-a015b09eb71d/start/>`_ to build your knowledge.
+As this workshop is using Kubernetes and a lot of command line commands, some knowledge on Kubernetes is a pre, not a must.
 
 Agenda
 ++++++
 
-- Build containers using the Linux tools available
-- Use tooling and build a CI/CD Pipeline
-- Use the CI/CD pipeline
-- Refactor the container
-- (Optional) integrate Era in the CI/CD Pipeline
+- Prepare your environment for the workshop by deploying and configuring the WinTools VM
+- Deploying a blueprint so we have the needed Database infrastructure and registered in era
+- Deploy Karbon as the kubernetes platform
+- Install and configure needed components in kubernetes
+
+  - Load Balancer
+  - Ingress controller
+  - Logging
+  - Monitoring
+
+- Deploy the organisation's application
+- Change the ingress controller
+- Deploy Objects
+- Install and configure a backup solution
+- Expand your Karbon cluster
+- Upgrade a Kubernetes infrastructure
+
 
 Introductions
 +++++++++++++
@@ -248,6 +257,6 @@ For RTP:
 Nutanix Version Info
 ++++++++++++++++++++
 
-- **AHV Version** - AHV 20170830.337
-- **AOS Version** - 5.11.2.3
-- **PC Version** - 5.11.2.1
+- **AHV Version** - AHV 20201105.1021
+- **AOS Version** - 5.19.0.5
+- **PC Version** - 2020.11
